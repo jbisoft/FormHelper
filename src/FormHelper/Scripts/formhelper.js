@@ -577,6 +577,12 @@
         $(el.target).valid();
       });
 
+    $($form)
+      .find("select")
+      .on("select2:close", function (el) {
+        $(el.target).valid();
+      });
+
     options = $.extend({}, $.formhelper.defaultOptions, options);
 
     $form.unbind("submit");
@@ -694,7 +700,7 @@
               validator.showErrors(obj);
             }
 
-            validator.focusInvalid();
+            //validator.focusInvalid();
           }
 
           if (options.callback) {
