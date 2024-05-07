@@ -601,7 +601,7 @@
 
       if (!validationResult) {
         if (fhToastr) {
-          fhToastr.error(
+            toastNotifyError(
             options.checkTheFormFieldsMessage,
             null,
             toastrOptions
@@ -667,16 +667,16 @@
 
           if (hasMessage) {
             if (result.status === 1 || result.status === "Success") {
-              fhToastr.success(result.message, null, toastrOptions);
+                toastNotifySuccess(result.message, null, toastrOptions);
             } else if (result.status === 2 || result.status === "Info") {
-              fhToastr.info(result.message, null, toastrOptions);
+                toastNotifyInformation(result.message, null, toastrOptions);
             } else if (result.status === 3 || result.status === "Warning") {
-              fhToastr.warning(result.message, null, toastrOptions);
+                toastNotifyWarning(result.message, null, toastrOptions);
             } else if (result.status === 4 || result.status === "Error") {
-              fhToastr.error(result.message, null, toastrOptions);
+              toastNotifyError(result.message, null, toastrOptions);
             }
           } else if (result.isSucceed === false) {
-            fhToastr.error(
+              toastNotifyError(
               options.checkTheFormFieldsMessage,
               null,
               toastrOptions
@@ -726,7 +726,7 @@
         },
         error: function (request, status, error) {
           console.error(request.responseText);
-          fhToastr.error(request.responseText, null, toastrOptions);
+            toastNotifyError(request.responseText, null, toastrOptions);
         },
       });
 
