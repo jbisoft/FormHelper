@@ -22,7 +22,7 @@ namespace FormHelper
                                     $form.attr('beforeSubmit', '{config.BeforeSubmit}');
                                     $form.attr('callback', '{config.Callback}');
                                     $form.attr('enableButtonAfterSuccess', '{config.EnableButtonAfterSuccess}');
-                                    $form.attr('resetFormAfterSuccess', '{config.ResetFormAfterSuccess}');
+                                    $form.attr('resetFormAfterSuccess', '{configuration.ResetFormFieldsAfterSuccess}');
                                     $form.attr('toastrPositionClass', '{(config.ToastrPosition == null ? configuration.ToastrDefaultPosition.ToClassName() : config.ToastrPosition.Value.ToClassName())}');
 
                                 }});
